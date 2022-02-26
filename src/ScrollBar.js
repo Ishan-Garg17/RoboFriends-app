@@ -3,7 +3,9 @@ import React from "react";
 const ScrollBar = (props)=>{
     
     return(
-        <div style={{overflowY: scroll}}>
+        <div style={{overflowY: 'scroll', border: '1px solid cyan', margin: '20px', height: `500px`}}>
+            <br/>
+            <br/>
             {props.children}
         </div>
     )
