@@ -2,6 +2,7 @@ import React from "react";
 import CardList from "./CardList";
 import { robots } from './robots';
 import SearchBox from './SearchBox'
+import ScrollBar from "./ScrollBar";
 
 class App extends React.Component{
     constructor(){
@@ -23,7 +24,9 @@ class App extends React.Component{
             <div className="tc">
             <h1>RoboFriends App</h1>
             <SearchBox searchChange={this.onSearchChange}/>
-            <CardList robots={filteredRobots}/>
+            <ScrollBar>
+                <CardList robots={filteredRobots}/>
+            </ScrollBar>
             </div>
           </React.Fragment>
         )
