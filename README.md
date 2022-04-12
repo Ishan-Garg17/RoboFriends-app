@@ -1,4 +1,5 @@
 # Getting Started with Create React App
+# Built Using React-JS with Search Functionality using States and Props in React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
