@@ -3,8 +3,8 @@ import CardList from "../Components/CardList";
 import SearchBox from '../Components/SearchBox'
 import ScrollBar from "../Components/ScrollBar";
 import './App.css'
-
-class App extends React.Component{
+import {Component} from "react"
+class App extends Component{
     constructor(){
         super();
         this.state = {
@@ -14,10 +14,9 @@ class App extends React.Component{
     }
     componentDidMount(){
         fetch('https://jsonplaceholder.typicode.com/users').then(response=> response.json()).then(users=> this.setState({robots: users}))
-       
     }
     onSearchChange = (event)=>{
-        this.setState({ searchField: `${event.target.value}` })
+        this.setState({ searchField: event.target.value})
     }
     render(){
         
@@ -35,6 +34,6 @@ class App extends React.Component{
             </div>
         )
     }
-} 
+}
 
 export default App
